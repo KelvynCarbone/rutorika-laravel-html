@@ -226,7 +226,7 @@ class FormBuilder extends \Collective\Html\FormBuilder
         <div class="input-group date rk-datetimepicker">
             %s
             <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
+                <span class="fa fa-calendar"></span>
             </span>
         </div>';
         return sprintf($template, $this->text($name, $value, $options));
@@ -314,8 +314,8 @@ class FormBuilder extends \Collective\Html\FormBuilder
     {
         $previewTemplate = '<div class="rk-upload-item" data-filename="{filename}">
             <a href="{fileSrc}" class="thumb" style="background-image: url({fileSrc})"></a>
-            <p><span class="btn btn-default btn-sm sortable-handle"><i class="glyphicon glyphicon-resize-horizontal"></i></span>
-            <span class="btn btn-default btn-sm pull-right rk-upload-remove"><i class="glyphicon glyphicon-trash"></i></span></p>
+            <p><span class="btn btn-default btn-sm sortable-handle"><i class="fa fa-resize-horizontal"></i></span>
+            <span class="btn btn-default btn-sm pull-right rk-upload-remove"><i class="fa fa-trash"></i></span></p>
           </div>';
 
         return $this->renderUploadMultiple($previewTemplate, $name, $value, $options);
