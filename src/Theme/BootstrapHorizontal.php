@@ -39,7 +39,7 @@ class BootstrapHorizontal extends BootstrapAbstract implements Themable
     public function field($title, $name, $control = '', $errors = null, $help = '')
     {
         $template = '
-            <div class="form-group %s">
+            <div class="row %s">
               %s
               <div class="%s">
                 %s
@@ -50,7 +50,7 @@ class BootstrapHorizontal extends BootstrapAbstract implements Themable
         ';
 
         $formClass = !empty($errors) && $errors->has($name) ? 'has-error' : '';
-        $labelClass = "col-md-{$this->labelWidth} control-label";
+        $labelClass = "col-md-12 control-label";
 
         if (!is_null($title)) {
             $label = $this->builder->label($name, $title, ['class' => $labelClass]);
@@ -58,7 +58,7 @@ class BootstrapHorizontal extends BootstrapAbstract implements Themable
             $label = '<div class="' . $labelClass . '"></div>';
         }
 
-        $controlClass = "col-md-{$this->controlWidth}";
+        $controlClass = "col-md-12";
         $error = empty($errors) ? '' : $errors->first($name, '<p class="help-block">:message</p>');
         $help = empty($help) ? '' : '<p class="help-block">' . $help . '</p>';
 
