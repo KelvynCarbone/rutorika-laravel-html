@@ -225,8 +225,10 @@ class FormBuilder extends \Collective\Html\FormBuilder
         $template = '
         <div class="input-group date rk-datetimepicker">
             %s
-            <span class="input-group-addon">
-                <span class="fa fa-calendar"></span>
+            <span class="input-group-addon calendar-icon">
+                <button class="btn btn-default date-range-picker" type="button">
+                <i class="fa fa-calendar"></i>
+                </button>
             </span>
         </div>';
         return sprintf($template, $this->text($name, $value, $options));
